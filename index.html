@@ -12,8 +12,8 @@
             <div class="nowPlaying" id="statusText">
                 <div class="imgCover"></div>
                 <span class="infoPlay">
-                    <h2>Radio test</h2>
-                    <h3>00.0 FM</h3>
+                    <h2>Radio Éxitos</h2>
+                    <h3>105.3 FM</h3>
                 </span>
                 
             </div>
@@ -44,7 +44,7 @@
             // Intentar reproducir
             audio.play().then(() => {
                 isPlaying = true;
-                btn.textContent = "⏸ Pausar";
+                btn.textContent = "▐▐ Pausar";
                 statusText.querySelector('h2').textContent = "Reproduciendo";
                 fondo.classList.add('playerState');
             }).catch(() => {
@@ -81,4 +81,5 @@
 </script>
     </body>
 </html>
+
 
