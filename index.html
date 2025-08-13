@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Radio Test</title>
+</head>
+
+<body>
+
+    <div class="player">
+        <div class="nowPlaying" id="statusText">
+            <div class="imgCover"></div>
+            <span class="infoPlay">
+                <h2 class="playTitle">
+                    <span class="playerTitle">Radio Éxitos</span>
+                </h2>
+                <h3>105.3 FM</h3>
+            </span>
+
+        </div>
+        <button class="play-btn" id="playPause">▶ Reproducir</button>
+    </div>
+
+    <audio id="audioPlayer">
+        <!--<source src="https://cdn.instream.audio:9738/stream"
+                type="audio/mpeg">-->
+        <source
+            src="https://stream-172.zeno.fm/cbbc8ffbo0iuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjYmJjOGZmYm8waXV2IiwiaG9zdCI6InN0cmVhbS0xNzIuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IlE4bUxsUkZ1Ujl5eEJFYk9NU2N6RlEiLCJpYXQiOjE3NTUwNjk4OTcsImV4cCI6MTc1NTA2OTk1N30.ilCNmQy211FKczUWUkLxqhKpwb01_Be4An_DNY2vl9A"
+            type="audio/mpeg">
+    </audio>
+
+    <script>
+        const audio = document.getElementById('audioPlayer');
+        const btn = document.getElementById('playPause');
+        const statusText = document.getElementById('statusText');
+        const fondo = document.querySelector('.player');
+        const playTitle = document.querySelector('.playTitle');
+        const infoPlay = document.querySelector('.infoPlay');
+
+        btn.addEventListener('click', () => {
+            if (audio.paused) {
+                statusText.querySelector('h2').textContent = "Conectando...";
+                btn.textContent = "Cargando";
+                fondo.classList.add('playerState');
+
+                let isPlaying = false;
+
+                // Intentar reproducir
+                audio.play().then(() => {
+                    isPlaying = true;
+                    btn.textContent = "⏸ Pausar";
+                    statusText.querySelector('h2').textContent = "Reproduciendo Radio Éxitos sdcsdcskdjcksjdcskjcksjcsdcj";
+                    if (playTitle.scrollWidth > infoPlay.clientWidth) {
+                        playTitle.classList.add('mover');
+                        
+                    }
+                    fondo.classList.add('playerState');
+                }).catch(() => {
+                    statusText.querySelector('h2').textContent = "Fuera del aire";
+                    btn.textContent = "No disponible";
+                    fondo.classList.remove('playerState');
+                    playTitle.classList.remove('mover');
+                });
+
+                // Si después de 3 segundos no está sonando → fuera del aire
+                setTimeout(() => {
+                    if (!isPlaying || audio.paused) {
+                        statusText.querySelector('h2').textContent = "Fuera del aire";
+                        btn.textContent = "▶ Reproducir";
+                        audio.pause();
+                        btn.textContent = "No disponible";
+                        btn.style.backgroundColor = "#333"; // gris oscuro
+                        btn.style.cursor = "not-allowed";
+                        btn.disabled = true;
+                        playTitle.classList.remove('mover');
+                    }
+                }, 3000);
+
+            } else {
+                audio.pause();
+                btn.textContent = "▶ Reproducir";
+                statusText.querySelector('h2').textContent = "En pausa";
+                fondo.classList.remove('playerState');
+                playTitle.classList.remove('mover');
+            }
+        });
+
+        // Si hay error de carga
+        audio.addEventListener('error', () => {
+            statusText.querySelector('h2').textContent = "Fuera del aire";
+            btn.textContent = "▶ Reproducir";
+            playTitle.classList.remove('mover');
+        });
+    </script>
+
+    <!--<script>
+        const playTitle = document.querySelector('.playTitle');
+        const infoPlay = document.querySelector('.infoPlay');
+
+        if (playTitle.scrollWidth > infoPlay.clientWidth) {
+            playTitle.classList.add('mover');
+        } else {
+            playTitle.classList.remove('mover'); // opcional, por si antes ya tenía la clase
+        }
+    </script>-->
+</body>
+
+</html>

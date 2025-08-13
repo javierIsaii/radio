@@ -1,0 +1,147 @@
+body {
+  align-items: center;
+  background: #121212;
+  color: #fff;
+  display: flex;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.player {
+  border-radius: 15px;
+  box-shadow: -1px 3px 12px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  position: relative;
+  text-align: center;
+  width: 300px;
+  z-index: 2;
+}
+.playerState {
+  animation: gradientShift 25s ease infinite;
+  background: linear-gradient(
+    270deg,
+    #450060,
+    #002a8c,
+    #6c001b
+  );
+  background-size: 1000% 1000%;
+}
+
+.player::before {
+  background: inherit;
+  content: "";
+  filter: blur(60px) saturate(200%);
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+}
+
+.player::after {
+  background-color: #121212dc;
+  border-radius: 15px;
+  box-shadow: -1px 3px 12px rgba(0, 0, 0, 0.4);
+  content: "";
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.player h2 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.player h3 {
+  color: #c8c8c8;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.nowPlaying {
+  display: flex;
+  flex-direction: row;
+  height: 92px;
+  margin-bottom: 40px;
+}
+.imgCover {
+  background-color: #565656;
+  background-image: url(coverImg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 12px;
+  box-shadow: -1px 3px 12px rgba(0, 0, 0, 0.2);
+  height: 92px;
+  margin-right: 25px;
+  width: 92px;
+}
+
+.infoPlay {
+  text-align: left;
+  white-space: nowrap;
+  width: 135px;
+  overflow: hidden;
+}
+
+.playTitle {
+  display: inline-block;
+  margin: 0;
+  white-space: nowrap;
+  transition: all 0.3s;
+  width: 135px;
+  opacity: 1;
+}
+
+.mover {
+  animation: mover 8s linear .5s infinite, fadeIn 1s ease forwards;
+  transition: all .7s ease-in-out;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.play-btn {
+  background: #d5d5d5;
+  border: none;
+  border-radius: 25px;
+  color: #565656;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  height: 50px;
+  padding: 10px 20px;
+  text-align: center;
+  transition: 0.3s;
+  width: 160px;
+}
+.play-btn:hover {
+  background: #ababab;
+}
