@@ -52,7 +52,7 @@
                 audio.play().then(() => {
                     isPlaying = true;
                     btn.textContent = "⏸ Pausar";
-                    statusText.querySelector('h2').textContent = "Reproduciendo Radio Rocola sdcsdcskdjcksjdcskjcksjcsdcj";
+                    statusText.querySelector('h2').textContent = "Reproduciendo Radio Rocola";
                     if (playTitle.scrollWidth > infoPlay.clientWidth) {
                         playTitle.classList.add('mover');
                         
@@ -77,7 +77,7 @@
                         btn.disabled = true;
                         playTitle.classList.remove('mover');
                     }
-                }, 0);
+                }, );
 
             } else {
                 audio.pause();
@@ -110,5 +110,6 @@
 
 
 </html>
+
 
 
