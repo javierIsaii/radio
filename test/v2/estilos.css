@@ -439,7 +439,7 @@ a {
 
 .album-art {
   background-color: #535353;
-  background-image: url(/images/rocolaImg.jpg);
+  background-image: url(images/rocolaImg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -869,4 +869,5 @@ a {
   height: 40px;
   width: 40px;
 }
+
 
