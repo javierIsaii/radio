@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Radio Rocola</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <div class="logo">
+                <h1>Rocola</h1>
+            </div>
+            <nav>
+                <a href="#" target="_blank" class="socialLink ig" aria-label="Perfil de Instagram" title="Instagram">
+                    <svg width="64" height="64" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(-340.000000, -7439.000000)">
+                            <g transform="translate(56.000000, 160.000000)">
+                                <path fill="currentColor"
+                                    d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" class="socialLink yt" aria-label="Canal de YouTube" title="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="-7 0 250 165">
+                        <path fill="currentColor"
+                            d="M229.763 25.817c-2.699-10.162-10.65-18.165-20.748-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.553 7.652 7.6 15.655 4.903 25.817 0 44.236 0 82.667 0 82.667s0 38.429 4.903 56.85C7.6 149.68 15.553 157.681 25.65 160.4c18.3 4.934 91.682 4.934 91.682 4.934s73.383 0 91.682-4.934c10.098-2.718 18.049-10.72 20.748-20.882 4.904-18.421 4.904-56.85 4.904-56.85s0-38.431-4.904-56.85" />
+                        <path d="M93.333 117.559l61.333-34.89-61.333-34.894z" fill="gray" />
+                    </svg>
+                </a>
+                <a href="#" target="_blank" class="socialLink tt" aria-label="Perfil de TikTok" title="TikTok">
+                    <svg viewBox="4 4 42 42" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+                        <path fill="currentColor"
+                            d="M41 4H9C6.243 4 4 6.243 4 9v32c0 2.757 2.243 5 5 5h32c2.757 0 5-2.243 5-5V9c0-2.757-2.243-5-5-5m-3.994 18.323a7.482 7.482 0 0 1-.69.035 7.492 7.492 0 0 1-6.269-3.388v11.537a8.527 8.527 0 1 1-8.527-8.527c.178 0 .352.016.527.027v4.202c-.175-.021-.347-.053-.527-.053a4.351 4.351 0 1 0 0 8.704c2.404 0 4.527-1.894 4.527-4.298l.042-19.594h4.02a7.488 7.488 0 0 0 6.901 6.685v4.67" />
+                    </svg>
+                </a>
+            </nav>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <div class="toggle-track">
+                        <div class="toggle-thumb">
+                            <i class="fas fa-sun light-icon"></i>
+                            <i class="fas fa-moon dark-icon"></i>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="bodyContainer">
+
+    <section id="player">
+        <div class="player-container">
+            <h2>Lorem ipsum</h2>
+            <img src="images/cover.png" alt="Foto de portada" class="coverImg" width="300px" />
+            <img src="images/beachBg.jpg" alt class="anotherImg" width="300px" />
+
+            <div class="player-info playerGradient">
+                <div class="player-elements">
+                    <div class="album-art">
+                        <!-- La foto va en CSS-->
+                    </div>
+                    <div class="track-info">
+                        <h3 class="track-title" id="now-playing">Radio Rocola</h3>
+                        <p class="station-slogan">¡La mera jefa!</p>
+                        <span class="frequence">103.7 FM</span>
+                        <p class="status-text" id="status-text">En pausa</p>
+                    </div>
+
+                    <div class="live-status-container">
+                        <div class="live-status-indicator" id="status-indicator">
+                            <span class="live-pulse"></span>
+                            <span class="live-text">En vivo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-buttons">
+                    <div class="player-controls">
+                        <button class="control-btn play-btn" id="play" aria-label="Reproducir">
+                            <i class="fas fa-play"></i>
+                        </button>
+
+                        <button class="control-btn share" id="share-btn" aria-label="Compartir">
+                            <svg fill="currentColor" width="32px" height="32px" viewBox="0 0 50 50"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30.3 13.7L25 8.4l-5.3 5.3-1.4-1.4L25 5.6l6.7 6.7z" />
+                                <path d="M24 7h2v21h-2z" />
+                                <path
+                                    d="M35 40H15c-1.7 0-3-1.3-3-3V19c0-1.7 1.3-3 3-3h7v2h-7c-.6 0-1 .4-1 1v18c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V19c0-.6-.4-1-1-1h-7v-2h7c1.7 0 3 1.3 3 3v18c0 1.7-1.3 3-3 3z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="player-right-controls">
+                        <div class="volume-controls">
+                            <button class="control-btn volume-btn" id="volume-toggle" aria-label="Silenciar">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <div class="volume-slider-container">
+                                <input type="range" min="0" max="100" value="80" class="volume-slider"
+                                    id="volume-slider" />
+                                <div class="volume-level-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="schedule-item">
+        <div class="container">
+            <h2>Programación</h2>
+            <div class="schedule-grid">
+                <div class="schedule-item">
+                    <div class="time">06:00 - 09:00</div>
+                    <div class="program-info">
+                        <h3>Desayuno Musical</h3>
+                        <p>Con Juan Pérez</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">09:00 - 12:00</div>
+                    <div class="program-info">
+                        <h3>Matinal Rocola</h3>
+                        <p>Con María Gómez</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">12:00 - 14:00</div>
+                    <div class="program-info">
+                        <h3>La Hora del Almuerzo</h3>
+                        <p>Con Carlos López</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">14:00 - 17:00</div>
+                    <div class="program-info">
+                        <h3>Tarde de Éxitos</h3>
+                        <p>Con Ana Rodríguez</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">17:00 - 20:00</div>
+                    <div class="program-info">
+                        <h3>Rocola Rush Hour</h3>
+                        <p>Con Pedro Martínez</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">20:00 - 00:00</div>
+                    <div class="program-info">
+                        <h3>Noche de Leyendas</h3>
+                        <p>Con Laura Sánchez</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="live-video-section">
+        <div class="container">
+            <h2>Video en Vivo</h2>
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <i class="fas fa-video"></i>
+                    <p>Próximamente...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team-member">
+        <div class="container">
+            <h2>Nuestro Equipo</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80"
+                            alt="Juan Pérez" />
+                    </div>
+                    <h3 class="memberName">Juan Pérez</h3>
+                    <p class="memberRole">Director y Locutor</p>
+                    <p class="memberAbout">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <div class="socialMedia">
+                        <a href="https://instagram.com/" target="_blank" class="socialIcon instagram"
+                            aria-label="Perfil de Instagram" title="Instagram">
+                            <svg width="64" height="64" viewBox="0 0 20 20" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g transform="translate(-340.000000, -7439.000000)">
+                                    <g transform="translate(56.000000, 160.000000)">
+                                        <path fill="currentColor"
+                                            d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80"
+                            alt="María Gómez" />
+                    </div>
+                    <h3>María Gómez</h3>
+                    <p>Locutora</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80"
+                            alt="Carlos López" />
+                    </div>
+                    <h3>Carlos López</h3>
+                    <p>Locutor y Productor</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80"
+                            alt="Ana Rodríguez" />
+                    </div>
+                    <h3>Ana Rodríguez</h3>
+                    <p>Locutora</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+        const body = document.body;
+
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            body.classList.add(savedTheme);
+        } else {
+            body.classList.add("dark-mode");
+        }
+
+        const prefersDarkScheme = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        );
+        if (!savedTheme && prefersDarkScheme.matches) {
+            body.classList.add("dark-mode");
+        }
+
+        themeToggle.addEventListener("click", () => {
+            if (body.classList.contains("light-mode")) {
+                body.classList.remove("light-mode");
+                body.classList.add("dark-mode");
+                localStorage.setItem("theme", "dark-mode");
+            } else {
+                body.classList.remove("dark-mode");
+                body.classList.add("light-mode");
+                localStorage.setItem("theme", "light-mode");
+            }
+
+            themeToggle.style.transform = "scale(0.95)";
+            setTimeout(() => {
+                themeToggle.style.transform = "scale(1)";
+            }, 150);
+        });
+    </script>
+
+    <script>
+        var menu = document.querySelector(".menu");
+        var scrollOffset = 400;
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > scrollOffset) {
+                menu.style.cssText =
+                    "backdrop-filter: saturate(180%) blur(22px) brightness(170%); -webkit-backdrop-filter: saturate(180%) blur(20px); background-color: var(--bg-blur-primary); background-image: linear-gradient(transparent,transparent);";
+            } else {
+                menu.style.cssText = "background-color: (--bg-primary)";
+            }
+        });
+    </script>
+
+    <script>
+        // Reproductor de radio funcional
+        class RadioPlayer {
+            constructor() {
+                this.audio = new Audio();
+                this.audio.crossOrigin = "anonymous";
+                this.audio.src =
+                    "https://cast2.my-control-panel.com/proxy/radioroc/stream";
+
+                this.isPlaying = false;
+                this.isMuted = false;
+                this.volume = 80; // 0-100 scale
+                this.isOnline = true;
+
+                this.initializeElements();
+                this.setupEventListeners();
+                this.setVolume(this.volume);
+                this.checkStreamStatus();
+            }
+
+            initializeElements() {
+                this.playButton = document.getElementById("play");
+                this.shareButton = document.getElementById("share-btn");
+                this.volumeToggle = document.getElementById("volume-toggle");
+                this.volumeSlider = document.getElementById("volume-slider");
+                this.volumeLevel = document.querySelector(".volume-level-indicator");
+                this.statusIndicator = document.getElementById("status-indicator");
+                this.statusText = document.querySelector(".status-text");
+                this.livePulse = document.querySelector(".live-pulse");
+                this.liveText = document.querySelector(".live-text");
+                this.nowPlaying = document.getElementById("now-playing");
+                this.statusTextElement = document.getElementById("status-text");
+                this.gradient = document.querySelector(".playerGradient");
+            }
+
+            setupEventListeners() {
+                // Botón de play/pause
+                this.playButton.addEventListener("click", () => {
+                    this.togglePlay();
+                });
+
+                // Botón de compartir
+                this.shareButton.addEventListener("click", () => {
+                    this.shareRadio();
+                });
+
+                // Botón de mute/unmute
+                this.volumeToggle.addEventListener("click", () => {
+                    this.toggleMute();
+                });
+
+                // Control de volumen
+                this.volumeSlider.addEventListener("input", (e) => {
+                    this.setVolume(parseInt(e.target.value));
+                });
+
+                // Eventos del audio
+                this.audio.addEventListener("play", () => {
+                    this.setPlayingState(true);
+                    this.statusTextElement.textContent = "Transmitiendo";
+                });
+
+                this.audio.addEventListener("pause", () => {
+                    this.setPlayingState(false);
+                    this.statusTextElement.textContent = "En pausa";
+                });
+
+                this.audio.addEventListener("error", (e) => {
+                    console.error("Error en el reproductor:", e);
+                    this.setPlayingState(false);
+                    this.statusTextElement.textContent = "Error de conexión";
+                    this.statusTextElement.style.color = "#ff2c56";
+                    this.setOfflineStatus();
+                });
+
+                // Verificar estado del stream periódicamente
+                setInterval(() => {
+                    this.checkStreamStatus();
+                }, 30000); // Cada 30 segundos
+            }
+
+            togglePlay() {
+                if (this.isPlaying) {
+                    this.pause();
+                } else {
+                    this.play();
+                }
+
+                // Animación del botón
+                this.playButton.style.transform = " translateX(-50%) scale(0.95)";
+                setTimeout(() => {
+                    this.playButton.style.transform = "translateX(-50%) scale(1)";
+                }, 150);
+            }
+
+            play() {
+                this.audio
+                    .play()
+                    .then(() => {
+                        this.isPlaying = true;
+                        this.setPlayingState(true);
+                        this.statusTextElement.textContent = "Transmitiendo";
+                        this.statusTextElement.style.color = "#f1f1f1";
+                        this.statusTextElement.style.textShadow =
+                            "0px 0px 25px rgb(255, 255, 255, 0.7)";
+                        this.gradient.classList.add("show");
+                        this.setOnlineStatus();
+                    })
+                    .catch((error) => {
+                        console.error("Error al reproducir:", error);
+                        this.isPlaying = false;
+                        this.setPlayingState(false);
+                        this.statusTextElement.textContent = "Error de conexión";
+                        this.statusTextElement.style.color = "#ff2c56";
+                        this.statusTextElement.style.textShadow =
+                            "0px 0px 25px rgb(255, 255, 255, 0)";
+                        this.gradient.classList.remove("show");
+                        this.setOfflineStatus();
+                    });
+            }
+
+            pause() {
+                this.audio.pause();
+                this.isPlaying = false;
+                this.setPlayingState(false);
+                this.statusTextElement.textContent = "En pausa";
+                this.statusTextElement.style.color = "#b4794b";
+                this.statusTextElement.style.textShadow =
+                    "0px 0px 25px rgb(255, 255, 255, 0)";
+                this.gradient.classList.remove("show");
+            }
+
+            toggleMute() {
+                this.isMuted = !this.isMuted;
+
+                // Si está muteado, guardar el volumen anterior y poner a 0
+                if (this.isMuted) {
+                    this.previousVolume = this.volume;
+                    this.setVolume(0);
+                } else {
+                    // Restaurar el volumen anterior
+                    this.setVolume(this.previousVolume || 5);
+                }
+
+                // Actualizar icono de volumen
+                this.updateVolumeIcon();
+
+                // Animación del botón
+                this.volumeToggle.style.transform = "scale(0.97)";
+                setTimeout(() => {
+                    this.volumeToggle.style.transform = "scale(1)";
+                }, 200);
+            }
+
+            setVolume(level) {
+                this.volume = level;
+                this.audio.volume = level / 100;
+
+                // Actualizar slider y indicador
+                this.volumeSlider.value = level;
+                this.volumeLevel.textContent = level;
+
+                // Actualizar icono de volumen
+                this.updateVolumeIcon();
+
+                // Actualizar variable CSS para el volumen
+                document.documentElement.style.setProperty("--volume", `${level}%`);
+
+                // Si el volumen es 0, activar mute visualmente
+                if (level === 0 && !this.isMuted) {
+                    this.isMuted = true;
+                    this.updateVolumeIcon();
+                } else if (level > 0 && this.isMuted) {
+                    this.isMuted = false;
+                    this.updateVolumeIcon();
+                }
+            }
+
+            updateVolumeIcon() {
+                let iconClass = "fas fa-volume-";
+
+                if (this.isMuted || this.volume === 0) {
+                    iconClass += "mute";
+                } else if (this.volume < 4) {
+                    iconClass += "down";
+                } else {
+                    iconClass += "up";
+                }
+
+                this.volumeToggle.innerHTML = `<i class="${iconClass}"></i>`;
+            }
+
+            shareRadio() {
+                if (navigator.share) {
+                    navigator
+                        .share({
+                            title: "Radio Rocola 103.7 FM",
+                            text: "Escucha Radio Rocola 103.7 FM en vivo",
+                            url: window.location.href,
+                        })
+                        .catch((error) => {
+                            console.log("Error al compartir:", error);
+                        });
+                } else {
+                    // Fallback para navegadores que no soportan Web Share API
+                    alert(
+                        "Comparte Radio Rocola 103.7 FM con tus amigos: " +
+                        window.location.href
+                    );
+                }
+
+                // Animación del botón
+                this.shareButton.style.transform = "scale(0.9)";
+                setTimeout(() => {
+                    this.shareButton.style.transform = "scale(1)";
+                }, 200);
+            }
+
+            setPlayingState(playing) {
+                this.isPlaying = playing;
+                if (playing) {
+                    this.playButton.innerHTML = '<i class="fas fa-pause"></i>';
+                    this.playButton.setAttribute("aria-label", "Pausar");
+                } else {
+                    this.playButton.innerHTML = '<i class="fas fa-play"></i>';
+                    this.playButton.setAttribute("aria-label", "Reproducir");
+                }
+            }
+
+            checkStreamStatus() {
+                // Simular verificación de estado del stream
+                // En una implementación real, aquí harías una petición para verificar el estado
+                const isOnline = Math.random() > 0.1; // 90% de probabilidad de estar online
+
+                if (isOnline) {
+                    this.setOnlineStatus();
+                } else {
+                    this.setOfflineStatus();
+                }
+            }
+
+            setOnlineStatus() {
+                this.isOnline = true;
+                this.statusIndicator.classList.remove("offline");
+                this.liveText.textContent = "En vivo";
+                this.livePulse.style.animation = "pulse 2s infinite ease-out";
+                this.livePulse.style.backgroundColor = "white";
+            }
+
+            setOfflineStatus() {
+                this.isOnline = false;
+                this.statusIndicator.classList.add("offline");
+                this.liveText.textContent = "Offline";
+                this.livePulse.style.animation = "none";
+                this.livePulse.style.backgroundColor = "#ccc";
+
+                // Si estaba reproduciendo, pausar
+                if (this.isPlaying) {
+                    this.pause();
+                }
+            }
+        }
+
+        // Inicializar el reproductor cuando la página cargue
+        document.addEventListener("DOMContentLoaded", () => {
+            window.radioPlayer = new RadioPlayer();
+
+            // Mejorar la compatibilidad con dispositivos táctiles
+            document.addEventListener("touchstart", function () { }, true);
+        });
+
+        // Efectos de hover para elementos interactivos
+        const interactiveElements = document.querySelectorAll(
+            "button, a, .schedule-item, .team-member"
+        );
+        interactiveElements.forEach((element) => {
+            element.addEventListener("mouseenter", () => {
+                element.style.transition =
+                    "transform 0.2s ease, background-color 0.3s ease, color 0.3s ease";
+            });
+        });
+    </script>
+</body>
+
+</html>
