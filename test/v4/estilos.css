@@ -1148,7 +1148,7 @@ a {
 /* Glassmorphism perfecto */
 .schedule-item {
   align-items: center;
-  backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(0px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1930,3 +1930,4 @@ footer {
     top: 9%;
   }
 }
+
