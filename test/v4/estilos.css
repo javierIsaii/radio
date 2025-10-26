@@ -428,6 +428,9 @@ a {
 }
 
 .theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   background: none;
   background-color: var(--bg-tertiary);
   border: none;
@@ -437,6 +440,8 @@ a {
   position: relative;
   transition: background-color 0.3s;
   width: 66px;
+  padding: 3px; /* espacio interno equivalente a top: 2px */
+  box-sizing: border-box;
 }
 
 .toggle-track {
@@ -449,21 +454,19 @@ a {
 }
 
 .toggle-thumb {
-  align-items: center;
   background-color: var(--accent-color);
   border-radius: 50%;
   display: flex;
-  height: 24px;
+  align-items: center;
   justify-content: center;
-  left: 0px;
-  position: absolute;
-  top: 2px;
-  transition: transform 0.3s ease;
+  height: 24px;
   width: 24px;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
 }
 
 .light-mode .toggle-thumb {
-  transform: translateX(30px);
+  transform: translateX(36px);
 }
 
 .light-icon,
@@ -1947,6 +1950,7 @@ footer {
     top: 9%;
   }
 }
+
 
 
 
