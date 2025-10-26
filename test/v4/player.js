@@ -20,7 +20,6 @@
                 this.setupEventListeners();
                 this.setVolume(this.volume);
                 this.checkStreamStatus();
-                this.preventAutoPause();
             }
 
             initializeElements() {
@@ -287,3 +286,4 @@
             });
 
         });
+
