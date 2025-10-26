@@ -32,7 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
         el.classList.add("fade-in-up");
       }, index * 250); // cada elemento entra con 150ms de diferencia
     });
-  }, 2800); // espera 1s antes de iniciar las apariciones
+  }, 1800); // espera 1s antes de iniciar las apariciones
 });
+
 
 
