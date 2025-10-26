@@ -67,12 +67,15 @@
 }
 @supports (-webkit-touch-callout: none) {
   h1{
-    font-weight: 600 !important;
+    font-weight: 500 !important;
   }
   h2, h3 {
     font-weight: 600 !important;
   }
-  p, span {
+  span {
+    font-weight: 500 !important;
+  }
+  p {
     font-weight: 400 !important;
   }
 }
@@ -1944,6 +1947,7 @@ footer {
     top: 9%;
   }
 }
+
 
 
 
