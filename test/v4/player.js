@@ -7,7 +7,7 @@
                     "https://cast2.my-control-panel.com/proxy/radioroc/stream";
 
                 // Configuración para prevenir pausas automáticas
-                this.audio.preload = "auto";
+                this.audio.preload = "none";
                 this.audio.autoplay = false;
 
                 this.isPlaying = false;
@@ -286,4 +286,5 @@
             });
 
         });
+
 
