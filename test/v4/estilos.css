@@ -70,10 +70,10 @@
     font-weight: 600 !important;
   }
   h2, h3 {
-    font-weight: 500 !important;
+    font-weight: 600 !important;
   }
   p, span {
-    font-weight: 300 !important;
+    font-weight: 400 !important;
   }
 }
 
@@ -1944,6 +1944,7 @@ footer {
     top: 9%;
   }
 }
+
 
 
 
