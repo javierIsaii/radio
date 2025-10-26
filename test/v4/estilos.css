@@ -65,6 +65,11 @@
   font-family: "Exo";
   src: url("fonts/Exo2-VariableFont.woff2") format("woff2");
 }
+@supports (-webkit-touch-callout: none) {
+  h1, h2, p, span {
+    font-weight: 300 !important;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -1933,6 +1938,7 @@ footer {
     top: 9%;
   }
 }
+
 
 
 
