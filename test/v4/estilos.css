@@ -1286,6 +1286,7 @@ a {
 iframe {
   border-radius: 12px;
   transition: 0.3s ease-in-out;
+  display: none;
 }
 
 /* Team Section */
@@ -1930,4 +1931,5 @@ footer {
     top: 9%;
   }
 }
+
 
