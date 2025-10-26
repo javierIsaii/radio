@@ -38,74 +38,7 @@
                 this.gradient = document.querySelector(".playerGradient");
             }
 
-            // SOLUCIÓN DEFINITIVA: Prevenir TODAS las pausas automáticas
-            preventAutoPause() {
-                // 1. Mantener reproducción cuando cambia visibilidad
-                document.addEventListener("visibilitychange", () => {
-                    if (!document.hidden && this.userWantsToPlay) {
-                        // Página visible de nuevo, reanudar si el usuario quería reproducir
-                        setTimeout(() => {
-                            if (!this.isPlaying && this.userWantsToPlay) {
-                                this.audio.play().catch((err) => {
-                                    console.log("Reintentando reproducción:", err);
-                                });
-                            }
-                        }, 100);
-                    }
-                });
-
-                // 2. Interceptar pausas NO causadas por el usuario
-                this.audio.addEventListener("pause", () => {
-                    // Si el usuario quiere reproducir pero el audio se pausó, reanudar
-                    if (this.userWantsToPlay && !this.isManualPause) {
-                        console.log("Pausa automática detectada, reanudando...");
-                        setTimeout(() => {
-                            this.audio.play().catch((err) => {
-                                console.log("Error al reanudar:", err);
-                            });
-                        }, 50);
-                    }
-                });
-
-                // 3. Interceptar eventos de "suspend" (cuando el navegador pausa por ahorro)
-                this.audio.addEventListener("suspend", () => {
-                    if (this.userWantsToPlay) {
-                        console.log("Navegador intentó suspender, reanudando...");
-                        this.audio.load();
-                        setTimeout(() => {
-                            if (this.userWantsToPlay) {
-                                this.audio.play().catch((err) => console.log("Error:", err));
-                            }
-                        }, 100);
-                    }
-                });
-
-                // 4. Mantener activo cuando pierde foco
-                window.addEventListener("blur", () => {
-                    if (this.userWantsToPlay && !this.audio.paused) {
-                        // Guardar estado pero no hacer nada, dejar reproduciendo
-                        console.log("Ventana perdió foco, manteniendo reproducción...");
-                    }
-                });
-
-                // 5. Reanudar cuando recupera foco
-                window.addEventListener("focus", () => {
-                    if (this.userWantsToPlay && this.audio.paused) {
-                        console.log("Ventana recuperó foco, reanudando...");
-                        this.audio.play().catch((err) => console.log("Error:", err));
-                    }
-                });
-
-                // 6. Prevenir que el navegador detenga por "inactividad"
-                setInterval(() => {
-                    if (this.userWantsToPlay && this.audio.paused) {
-                        console.log("Verificando estado, reanudando si es necesario...");
-                        this.audio.play().catch((err) => {
-                            // Silenciar errores de reproducción automática
-                        });
-                    }
-                }, 2000); // Verificar cada 2 segundos
-            }
+            
 
             setupEventListeners() {
                 // Botón de play/pause
@@ -352,4 +285,5 @@
                 element.style.transition =
                     "transform 0.2s ease, background-color 0.3s ease, color 0.3s ease";
             });
+
         });
