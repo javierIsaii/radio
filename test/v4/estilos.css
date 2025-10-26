@@ -66,7 +66,10 @@
   src: url("fonts/Exo2-VariableFont.woff2") format("woff2");
 }
 @supports (-webkit-touch-callout: none) {
-  h1, h2, p, span {
+  h1{
+    font-weight: 500 !important;
+  }
+  h2, p, span {
     font-weight: 300 !important;
   }
 }
@@ -1938,6 +1941,7 @@ footer {
     top: 9%;
   }
 }
+
 
 
 
