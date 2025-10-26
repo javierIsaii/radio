@@ -505,7 +505,7 @@ a {
   text-align: center;
   -webkit-text-fill-color: transparent;
 }
-.welcomeLine,
+/*.welcomeLine,
 .anotherImg,
 .player-elements,
 .player-buttons,
@@ -513,7 +513,7 @@ a {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
-}
+}*/
 
 /* Cuando se activa */
 .fade-in-up {
@@ -1931,5 +1931,6 @@ footer {
     top: 9%;
   }
 }
+
 
 
