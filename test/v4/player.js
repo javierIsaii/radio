@@ -3,9 +3,9 @@
             constructor() {
                 this.audio = new Audio();
                 this.audio.crossOrigin = "anonymous";
-                this.audio.src =
-                    "https://cast2.my-control-panel.com/proxy/radioroc/stream";
-
+                // No carga el stream aún
+                this.streamURL = "https://cast2.my-control-panel.com/proxy/radioroc/stream";
+                    
                 // Configuración para prevenir pausas automáticas
                 this.audio.preload = "none";
                 this.audio.autoplay = false;
@@ -100,6 +100,10 @@
             }
 
             play() {
+
+                if (!this.audio.src) {
+                        this.audio.src = this.streamURL;
+                }
                 this.audio
                     .play()
                     .then(() => {
@@ -286,5 +290,6 @@
             });
 
         });
+
 
 
