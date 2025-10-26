@@ -509,7 +509,6 @@
         });
     </script>
     <script src="player.js"></script>
-    <script src="splash.js"></script>
     <script src="animator.js"></script>
     <script>
         // --- Media Session API ---
@@ -524,18 +523,11 @@
                     { src: "https://radiorocola1037fm.com/rocolaImg.jpg", sizes: "512x512", type: "image/jpg" }
                 ],
             });
-
-            // 🎮 Conectamos los botones del sistema con el audio real
-            navigator.mediaSession.setActionHandler("play", () => this.play());
-            navigator.mediaSession.setActionHandler("pause", () => this.pause());
-            navigator.mediaSession.setActionHandler("stop", () => this.stop());
         }
-
-        // Actualizamos el estado del popup según la reproducción
-
     </script>
 </body>
 
 </html>
+
 
 
