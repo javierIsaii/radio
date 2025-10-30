@@ -2200,8 +2200,7 @@ footer {
   }
 
   .player-container {
-    background-color: #4e1909;
-    /**/
+     /*background-color: #4e1909;*/
   }
 
   .player-elements {
@@ -2285,3 +2284,4 @@ footer {
     align-items: flex-start;
   }
 }
+
